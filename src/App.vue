@@ -20,8 +20,8 @@
           <tr v-for="(item,index) in tasks" :key="index">
             <th scope="row">{{index+1}}</th>
             <td :class="{'finished' : item.finished == true}">{{item.task}}</td>
-            <td><i class="fas fa-check addPointer" @click="Finished(index)"></i></td>
-            <td><i class="far fa-trash-alt addPointer" @click="Delete(index)"></i></td>
+            <td><img src="./assets/tick.png" class="addPointer" @click="Finished(index)" width="25" height="25"></td>
+            <td><img src="./assets/dustbin.png" class="addPointer" @click="Delete(index)" width="25" height="25"></td>
           </tr>
         </tbody>
       </table>
